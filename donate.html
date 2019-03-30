@@ -14,6 +14,35 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.min.css" rel="stylesheet">
+    <script>
+
+document.forms['gform'].onsubmit = function(form) { // you have to add 'name' attribute to the form and replace 'yourForm' with it
+    var data = ... //here you have to get all the values from form elements and store them in data object. to make less changes to the script use the elements' names as object names
+    if (window.XMLHttpRequest)
+    {
+        var xhReq = new XMLHttpRequest();
+    }
+    else
+    {
+        var xhReq = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+
+    var method= 'POST')
+    var async = false; //you can actually set true here, it doesn't matter much in this case
+    var url = 'mail.php';
+    xhReq.open(method, url, async);
+    xhReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhReq.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhReq.send(data);
+
+
+
+    document.getElementById("form's parent's ID goes here").innerHTML = "new content"
+
+
+    return false;
+} </script>
 </head>
 
 <body>
@@ -86,11 +115,11 @@
         <h1 align="center" style="color:#04a1ef"> Donate</h1>
 
 
-        <form>
+        <form class="gform" >
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Name</label>
-                <input type="password" class="form-control" id="example: " placeholder="Name">
+                <input type="text" class="form-control" id="example: " placeholder="Name">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Description</label>
@@ -114,8 +143,30 @@
         </label>
     </div>
      <div class="form-group">
+
+
+
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
     <label for="exampleFormControlFile1">Upload an Image</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" class="form-control-file" id="img" onchange="previewFile()">
   </div>
 
 
