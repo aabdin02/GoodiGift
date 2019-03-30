@@ -26,7 +26,7 @@
             <div class="container">
 
                 <!-- Brand -->
-                <a class="navbar-brand waves-effect" href="index.php" target="_blank">
+                <a class="navbar-brand waves-effect" href="index.html">
                     <strong class="blue-text">Giver</strong>
                 </a>
 
@@ -48,10 +48,10 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link waves-effect" href="donate.html" target="_blank">Donate</a>
+                        <a class="nav-link waves-effect" href="donate.html" >Donate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link waves-effect" href="volunteer.html" target="_blank">Volunteer</a>
+                        <a class="nav-link waves-effect" href="volunteer.html">Volunteer</a>
                     </li>
 
                 </ul>
@@ -83,20 +83,45 @@
 <!--Main layout-->
 <main class="mt-5 pt-5">
     <div class="container">
+        <h1 align="center" style="color:#04a1ef"> Donate</h1>
 
 
         <form>
 
-        <div class="form-group">
-            <label for="exampleInputPassword1">Name</label>
-            <input type="password" class="form-control" id="example: " placeholder="name">
+            <div class="form-group">
+                <label for="exampleInputPassword1">Name</label>
+                <input type="password" class="form-control" id="example: " placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description</label>
+                <textarea class="form-control" id="disText" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Address</label>
+                <textarea class="form-control" id="address" rows="3"></textarea>
+            </div>
+             <label class="form-check-label" for="exampleCheck1">Item Condition</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+               New
+            </label>
         </div>
         <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Item Condition</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+             Used
+        </label>
+    </div>
+     <div class="form-group">
+    <label for="exampleFormControlFile1">Upload an Image</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+
+
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
 </div>
 </main>
@@ -107,7 +132,7 @@
 
     <!--Call to action-->
     <div class="pt-4">
-        <a class="btn btn-outline-white" href="donate.html" target="_blank" role="button">Donate your Staff
+        <a class="btn btn-outline-white" href="donate.html" target="_blank" role="button">Donate your Stuff
 
         </a>
         <a class="btn btn-outline-white" href="volunteer.html" target="_blank" role="button">Voulnteer with Us
@@ -145,7 +170,7 @@
     <!--Copyright-->
     <div class="footer-copyright py-3">
         © 2019 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> Giver.com </a>
+        <a href="https://mdbootstrap.com/education/bootstrap/" > Giver.com </a>
     </div>
     <!--/.Copyright-->
 
